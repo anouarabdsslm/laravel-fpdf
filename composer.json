@@ -1,0 +1,21 @@
+{
+    "name": "anouar/fpdf",
+    "description": "Fpdf allows to generate PDF files",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Anouar",
+            "email": "dtekind@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Anouar\\Fpdf": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
