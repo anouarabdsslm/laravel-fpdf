@@ -1,9 +1,9 @@
-laravel-Fpdf
-=====================
+##laravel-Fpdf
 
-Fpdf allows to generate PDF files
-=============
-Install this package through Composer. To your `composer.json` file, add:
+Fpdf allows to generate PDF files . This package is the laravel package version of http://www.fpdf.org , for more information check this link http://www.fpdf.org/?lang=en 
+
+###Installation
+To your `composer.json` file, add:
 
 ```js
 "require-dev": {
@@ -32,11 +32,9 @@ Finally, add the alias to `app/config/app.php`, within the `aliases` array.
 	'Fpdf'	  => 'Anouar\Fpdf\Facades\Fpdf',
 )
 ```
-That's it !!!!!
-==============
 
-Example Code
-============
+
+###Example Code
 
 ```php
 Route::get('pdf', function(){
