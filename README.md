@@ -11,7 +11,7 @@ To your `composer.json` file, add:
 }
 ```
 
-Next, run `composer update` to download it.
+Next, run `composer install` to download it.
 
 Add the service provider to `app/config/app.php`, within the `providers` array.
 
