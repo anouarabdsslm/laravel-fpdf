@@ -19,6 +19,7 @@ class FpdfServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('anouar/fpdf');
+		$this->package('anouar/fpdf');
 	}
 
 	/**
