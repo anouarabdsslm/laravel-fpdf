@@ -2,6 +2,9 @@
 
 Fpdf allows to generate PDF files . This package is the laravel package version of http://www.fpdf.org , for more information check this link http://www.fpdf.org/?lang=en 
 
+##Donation :
+If you want to support us: <a href='https://pledgie.com/campaigns/24666'><img alt='Click here to lend your support to: github and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/24666.png?skin_name=chrome' border='0' ></a>
+
 ###Installation
 To your `composer.json` file, add:
 
