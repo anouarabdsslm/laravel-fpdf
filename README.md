@@ -32,7 +32,7 @@ Finally, add the alias to `app/config/app.php`, within the `aliases` array.
 'aliases' => array(
 	// ...
 
-	'Fpdf'	  => 'Anouar\Fpdf\Facades\Fpdf',
+	'Fpdf'	  => 'Anouar\Fpdf\Fpdf',
 )
 ```
 
@@ -41,11 +41,11 @@ Finally, add the alias to `app/config/app.php`, within the `aliases` array.
 
 ```php
 Route::get('pdf', function(){
-
-        Fpdf::AddPage();
-        Fpdf::SetFont('Arial','B',16);
-        Fpdf::Cell(40,10,'Hello World!');
-        Fpdf::Output();
+	$fpdf = new Fpdf();
+        $fpdf->AddPage();
+        $fpdf->SetFont('Arial','B',16);
+        $fpdf->Cell(40,10,'Hello World!');
+        $fpdf->Output();
         exit;
 
 });
