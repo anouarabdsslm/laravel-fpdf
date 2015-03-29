@@ -1,3 +1,9 @@
+If you're going to use this package with L4 , make sure to include the laravel 4 version: 
+```js
+"require": {
+    "anouar/fpdf": "1.0"
+}
+```
 ##laravel-Fpdf
 
 Fpdf allows to generate PDF files . This package is the laravel package version of http://www.fpdf.org , for more information check this link http://www.fpdf.org/?lang=en 
@@ -10,7 +16,7 @@ To your `composer.json` file, add:
 
 ```js
 "require-dev": {
-	"anouar/fpdf": "dev-master"
+	"anouar/fpdf": "1.*"
 }
 ```
 
