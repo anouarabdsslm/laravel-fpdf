@@ -1,7 +1,7 @@
 If you're going to use this package with L4 , make sure to include the laravel 4 version: 
 ```js
 "require": {
-    "anouar/fpdf": "1.0"
+    "anouar/fpdf": "1.0.1"
 }
 ```
 ##laravel-Fpdf
@@ -16,7 +16,7 @@ To your `composer.json` file, add:
 
 ```js
 "require-dev": {
-	"anouar/fpdf": "dev-master"
+	"anouar/fpdf": "1.0.2"
 }
 ```
 
