@@ -10,7 +10,7 @@ To your `composer.json` file, add:
 
 ```js
 "require-dev": {
-	"anouar/fpdf": "dev-master"
+	"anouar/fpdf": "1.0.1"
 }
 ```
 
