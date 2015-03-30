@@ -50,3 +50,15 @@ Route::get('pdf', function(){
 
 });
 ```
+##OR
+
+```
+Route::get('pdf', function(){
+
+        Fpdf::AddPage();
+        Fpdf::SetFont('Arial','B',16);
+        Fpdf::Cell(40,10,'Hello World!');
+        Fpdf::Output();
+        exit;
+
+});
