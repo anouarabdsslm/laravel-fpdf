@@ -42,8 +42,7 @@ Finally, add the alias to `app/config/app.php`, within the `aliases` array.
 )
 ```
 
-
-###Example Code
+##Example Code
 
 ```php
 Route::get('pdf', function(){
@@ -52,6 +51,20 @@ Route::get('pdf', function(){
         $fpdf->SetFont('Arial','B',16);
         $fpdf->Cell(40,10,'Hello World!');
         $fpdf->Output();
+        exit;
+
+});
+```
+
+##OR
+
+```
+Route::get('pdf', function(){
+
+        Fpdf::AddPage();
+        Fpdf::SetFont('Arial','B',16);
+        Fpdf::Cell(40,10,'Hello World!');
+        Fpdf::Output();
         exit;
 
 });
