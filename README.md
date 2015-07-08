@@ -38,7 +38,7 @@ Finally, add the alias to `app/config/app.php`, within the `aliases` array.
 'aliases' => array(
 	// ...
 
-	'Fpdf'	  => 'Anouar\Fpdf\Fpdf',
+	'Fpdf'	  => 'Anouar\Fpdf\Facades\Fpdf',
 )
 ```
 
