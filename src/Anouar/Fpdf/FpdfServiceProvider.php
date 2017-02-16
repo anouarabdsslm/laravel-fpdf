@@ -18,8 +18,7 @@ class FpdfServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['fpdf'] = $this->app->share(function($app)
-        {
+		$this->app->singleton('fpdf', function($app) {
             return new Fpdf;
         });
 	}
