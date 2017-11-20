@@ -980,32 +980,30 @@ function SetXY($x, $y)
 	$this->SetX($x);
 }
 
-function Output($name='', $dest='')
+function Output($dest='', $name='')
 {
 	// Output PDF to some destination
-	if($this->state<3)
-		$this->Close();
+	if ($this->state < 3) {
+    $this->Close();
+  }
+
 	$dest = strtoupper($dest);
-	if($dest=='')
-	{
-		if($name=='')
-		{
+	if ($dest === '') {
+		if ($name === '') {
 			$name = 'doc.pdf';
 			$dest = 'I';
-		}
-		else
-			$dest = 'F';
+		} else {
+      $dest = 'F';
+    }
 	}
-	switch($dest)
-	{
+	switch($dest) {
 		case 'I':
 			// Send to standard output
 			$this->_checkoutput();
-			if(PHP_SAPI!='cli')
-			{
+			if (PHP_SAPI !== 'cli') {
 				// We send to a browser
 				header('Content-Type: application/pdf');
-				header('Content-Disposition: inline; filename="'.$name.'"');
+				header('Content-Disposition: inline; filename="' . $name . '"');
 				header('Cache-Control: private, max-age=0, must-revalidate');
 				header('Pragma: public');
 			}
@@ -1015,7 +1013,7 @@ function Output($name='', $dest='')
 			// Download file
 			$this->_checkoutput();
 			header('Content-Type: application/x-download');
-			header('Content-Disposition: attachment; filename="'.$name.'"');
+			header('Content-Disposition: attachment; filename="' . $name . '"');
 			header('Cache-Control: private, max-age=0, must-revalidate');
 			header('Pragma: public');
 			echo $this->buffer;
@@ -1023,8 +1021,9 @@ function Output($name='', $dest='')
 		case 'F':
 			// Save to local file
 			$f = fopen($name,'wb');
-			if(!$f)
-				$this->Error('Unable to create output file: '.$name);
+			if (!$f) {
+        $this->Error('Unable to create output file: ' . $name);
+      }
 			fwrite($f,$this->buffer,strlen($this->buffer));
 			fclose($f);
 			break;
@@ -1032,7 +1031,7 @@ function Output($name='', $dest='')
 			// Return as a string
 			return $this->buffer;
 		default:
-			$this->Error('Incorrect output destination: '.$dest);
+			$this->Error('Incorrect output destination: ' . $dest);
 	}
 	return '';
 }
